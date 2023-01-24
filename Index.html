@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Menu.com</title>
+</head>
+<style> 
+.overlay{ 
+position: fixed;
+height: 100%;
+width: 0;
+top: 0;
+left: 0;
+background-color: rgb(0,0,0);
+background-color: rgba(0,0,0,0.9);
+overflow: hidden;
+transition: 0.7s;
+}
+.overlay a{ 
+text-decoration: none;
+padding: 23px;
+color: white;
+font-size: 30px;
+display: block;
+}
+
+.overlay a:hover, .overlay a:focus { 
+color: teal;
+}
+
+.overlay-content{ 
+position: relative;
+top: 25%;
+width: 100%;
+text-align: center;
+}
+.overlay .closebtn{ 
+position: absolute;
+right: 45px;
+top: 20px;
+color: white;
+font-size: 60px;
+}
+.open{ 
+color: black;
+font-size: 30px;
+text-decoration: none;
+}
+
+@media screen and (max-width:770px){ 
+.open{display: block;}
+.overlay a{font-size: 35px;}
+.overlay .closebtn{ 
+font-size: 40px;
+top: -10px;
+right: 45px;
+}
+}
+
+</style>
+<body>
+
+<nav class="navabar"> 
+<div id="myNav" class="overlay"> 
+<a class="closebtn" onclick="closeNav()" href="javascript:void(0)">&times;</a>
+<div class="overlay-content"> 
+<a href="#">Home</a>
+<a href="#">About</a>
+<a href="#">My-projects</a>
+<a href="#">Works</a>
+<a href="#">Experience</a>
+</div>
+</div>
+<a class="open" onclick="openNav()" href="#">&#9776;</a>
+</nav>
+<script src="Menu.js"></script>
+
+</body>
+</html>
